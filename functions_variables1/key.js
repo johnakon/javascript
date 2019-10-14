@@ -1,3 +1,6 @@
+// code - group of statements performing speicific tasks
+// block - group of code
+
 var x = 2
 console.log(typeof x)
 
