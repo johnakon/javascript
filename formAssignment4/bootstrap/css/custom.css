@@ -20,62 +20,11 @@
 .bgcol {
   background-color: lightsteelblue !important;
 }
-
 .mynav{
   background-color: steelblue !important
 }
 
 
-/* html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.container {
-  max-width: 960px;
-}
-
-.pricing-header {
-  max-width: 700px;
-}
-
-.card-deck .card {
-  min-width: 220px;
-}
-
-
-.btn_primary {
-  color: #fff;
-  background-color: green;
-  border-color: green;
-}
-
-.btn_primary:hover {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
-} */
-
-/* new */
-
-/* html,
-body {
-  height: 100%;
-}
-
-body {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-} */
 
 .form-signin {
   width: 100%;

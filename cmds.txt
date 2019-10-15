@@ -1,0 +1,147 @@
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments
+$ git init
+Initialized empty Git repository in D:/johntel/Assignments/.git/
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments (master)
+$ git remote add origin https://github.com/danieljbuyinza/cohort-3.git
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments (master)
+$ git fetch origin
+remote: Enumerating objects: 58, done.
+remote: Counting objects: 100% (58/58), done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 58 (delta 9), reused 49 (delta 6), pack-reused 0
+Unpacking objects: 100% (58/58), done.
+From https://github.com/danieljbuyinza/cohort-3
+ * [new branch]      PhyllisNabangi -> origin/PhyllisNabangi
+ * [new branch]      master         -> origin/master
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments (master)
+$ git checkout master
+Already on 'master'
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments (master)
+$ cd 100%/
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100% (master)
+$ cd Akonya_john/
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$ git add  .
+warning: LF will be replaced by CRLF in 100%/Akonya_john/Assignments/assignment.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/Assignments/assignment_1.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/formAssignment4/js/bootstrap.bundle.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/formAssignment4/js/bootstrap.bundle.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/formAssignment4/js/bootstrap.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/formAssignment4/js/bootstrap.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/functions_variables1/functions.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/functions_variables1/key.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/functions_variables1/practise.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 100%/Akonya_john/functions_variables1/variables.js.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$ git commit -m "Added assignment files"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ADMIN@DESKTOP-PESB2H9.(none)')
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$ git config user.name  johnakon
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$ git config user.email john.akonya@gmail.com
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$ git commit -m "Added assignment files"
+[master 7437b2d] Added assignment files
+ 54 files changed, 38197 insertions(+)
+ create mode 100644 100%/Akonya_john/Assignments/assignment.js
+ create mode 100644 100%/Akonya_john/Assignments/assignment_1.js
+ create mode 100644 100%/Akonya_john/Assignments/assignment_2.js
+ create mode 100644 100%/Akonya_john/conditions4/loops1.js
+ create mode 100644 100%/Akonya_john/conditions4/loops2.js
+ create mode 100644 100%/Akonya_john/conditions4/loops3.js
+ create mode 100644 100%/Akonya_john/conditions_loops3/assignment_1.js
+ create mode 100644 100%/Akonya_john/conditions_loops3/assignment_2.js
+ create mode 100644 100%/Akonya_john/conditions_loops3/condition2.js
+ create mode 100644 100%/Akonya_john/conditions_loops3/condtions_loops1.js
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-grid.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-grid.css.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-grid.min.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-grid.min.css.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-reboot.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-reboot.css.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-reboot.min.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap-reboot.min.css.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap.css.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap.min.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/bootstrap.min.css.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/css/custom.css
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.bundle.js
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.bundle.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.bundle.min.js
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.bundle.min.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.js
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.min.js
+ create mode 100644 100%/Akonya_john/formAssignment4/bootstrap/js/bootstrap.min.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/form.js
+ create mode 100644 100%/Akonya_john/formAssignment4/images/coursework.png
+ create mode 100644 100%/Akonya_john/formAssignment4/images/exam.png
+ create mode 100644 100%/Akonya_john/formAssignment4/images/form.png
+ create mode 100644 100%/Akonya_john/formAssignment4/images/tests.png
+ create mode 100644 100%/Akonya_john/formAssignment4/images/utests.png
+ create mode 100644 100%/Akonya_john/formAssignment4/index.html
+ create mode 100644 100%/Akonya_john/formAssignment4/index_copy.html
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.bundle.js
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.bundle.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.bundle.min.js
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.bundle.min.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.js
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.min.js
+ create mode 100644 100%/Akonya_john/formAssignment4/js/bootstrap.min.js.map
+ create mode 100644 100%/Akonya_john/formAssignment4/js/popper.min.js
+ create mode 100644 100%/Akonya_john/formAssignment4/js/popper.min.js.txt
+ create mode 100644 100%/Akonya_john/formAssignment4/js/tooltip.min.js
+ create mode 100644 100%/Akonya_john/functions_variables1/functions.js
+ create mode 100644 100%/Akonya_john/functions_variables1/key.js
+ create mode 100644 100%/Akonya_john/functions_variables1/practise.js
+ create mode 100644 100%/Akonya_john/functions_variables1/variables.js
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$ git push origin
+Enumerating objects: 61, done.
+Counting objects: 100% (61/61), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (58/58), done.
+Writing objects: 100% (59/59), 512.44 KiB | 1.37 MiB/s, done.
+Total 59 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas: 100% (15/15), completed with 1 local object.
+To https://github.com/danieljbuyinza/cohort-3.git
+   7bec3cb..7437b2d  master -> master
+
+ADMIN@DESKTOP-PESB2H9 MINGW64 /d/johntel/Assignments/100%/Akonya_john (master)
+$
