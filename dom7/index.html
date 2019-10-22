@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script type="text/javascript" src="js/access.js"></script> -->
+    <!-- loads faster-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <h1>Accesing elements in the DOM</h1>
+    <h2>Id(#demo)</h2>
+    <div id="demo">
+          Access me using id
+        </div>
+    <!-- creating the divs-->
+    <div class="demo">
+        <p
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            what to know about me! sit tight :
+            <input type="text" name="name" id="about_me">
+        </p>
+    </div>
+    <!-- end of first div-->
+
+    <div class="demo">
+        Access me by class (1)
+    </div>
+    <!-- end of second div-->
+    <div class="demo">
+        <form>
+            <fieldset>
+                <legend>About me:</legend>
+               john
+            </fieldset>
+        </form>
+    </div>
+    <!--end of third div-->
+    <!-- end of the divs-->
+
+    <!--creating the article tag-->
+    <article>Access me by tag (1)</article>
+    <article>Access me by tag (2)</article>
+    <h2>Query selector</h2>
+
+    <div id="demo-query">
+        Access me by Query
+    </div>
+
+    <div id="demo-query">
+            Access me by Query
+        </div>
+
+    <!-- demonstrating query selector all-->
+    <h2>Query selector all</h2>
+    <div class="demo-query-all">
+        Access me by query all selector (1)
+    </div>
+    <div class="demo-query-all">
+        Access me by query all selector (2)
+    </div>
+<br>
+    <!-- creating the form element-->
+    <form action="" class="myform">
+        <button>This will do something</button>
+        <div>
+            hello
+        </div>
+
+    </form>
+
+
+    <script type="text/javascript" src="js/access.js"></script>
+
+</body>
+
+</html>

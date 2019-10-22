@@ -9,22 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/css/custom.css">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -36,29 +21,30 @@
             <div class="collapse bgcol" id="navbarHeader">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-md-5 py-4">
-                            <h4 class="text-blue">About me</h4>
-                            <p class="text-muted">Am Akonya John, currently a student at Clarke International
-                                University, School of
-                                Business and Applied Technolgy currently developing this Marks Calculator.</p>
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4 class="text-blue" style="text-decoration: underline;">About the Marks Calculator</h4>
+                            <p class="text-muted">
+                                This Marks Calculator is used to calculate the Final Exam mark of a student.
+                                It takes in input of two test marks - test Mark 1 and test Mark 2, compares them and
+                                gets the best done of the two. A coursework mark out of 100 is input, that is added to
+                                the <strong>best test Mark</strong> and an <strong>average</strong> of the two
+                                calculated, then converted to <strong>40%</strong>. This gives the general
+                                <strong>Coursework Mark</strong>. Then an exam mark out of 100 is input, converted to
+                                <strong>60%</strong> and then added to the general Course Work Mark. This gives the
+                                <strong>Final Exam mark </strong>for the student.
+                            </p>
                             <a href="javascript:window.location.reload(true)" style="text-decoration: none">
                                 <h3>Home</h3>
                             </a>
                         </div>
                         <div class="col-sm-4 offset-md-1 py-4">
-                            <h4 class="text-blue">Contact</h4>
+                            <h4 class="text-blue">Contact Me</h4>
                             <ul class="list-unstyled">
-                                <li><a href="https://twitter.com/akonya_john" class="text-teal" target="_blank">Follow
-                                        me on Twitter</a></li>
+                                <li><a href="https://twitter.com/akonya_john" class="text-teal" target="_blank">Follow me on Twitter</a></li>
                                 <li><a href="https://www.facebook.com/akonya.john.9" class="text-teal"
                                         target="_blank">Like me on Facebook</a></li>
                                 <li><a href="#" class="text-teal">Email me</a></li>
                             </ul>
-                        </div>
-                        <div class="col-sm-2 py-4">
-                            <div>
-                            <img src="images/john1.jpg" alt="" style="width: 100px;">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,7 +65,7 @@
                 </div>
             </div>
         </header>
-        
+
         <p>
             <h3 style="text-align: center; text-decoration: underline; color: teal;">Please enter your test marks,
                 coursework mark and exam mark here below !</h3>
@@ -89,9 +75,7 @@
         <!-- different forms here-->
         <div class="container">
             <div class="row">
-                <!--test mark div-->
-
-                <!-- trial form>-->
+                <!--marks div-->
                 <div class="col-6 col-md-4">
                     <form class="form-signin">
                         <div class="text-center mb-4">
@@ -103,17 +87,17 @@
                             <div class="col">
                                 <!-- <input type="text" class="form-control" placeholder="First name"> -->
                                 <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                        required autofocus>
-                                    <label for="inputEmail">Mark 1</label>
+                                    <input type="text" name="name" id="inputMark1" class="form-control"
+                                        placeholder="Test Mark" required autofocus>
+                                    <label for="inputMark">Mark 1</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <!-- <input type="text" class="form-control" placeholder="Last name"> -->
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password" required>
-                                    <label for="inputPassword">Mark 2</label>
+                                    <input type="text" name="name" id="inputMark2" class="form-control"
+                                        placeholder="Test Mark" required autofocus>
+                                    <label for="inputMark">Mark 2</label>
                                 </div>
                             </div>
 
@@ -123,12 +107,13 @@
                                 <input type="checkbox" value="remember-me"> Confirm test marks
                             </label>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
+                        <button class="btn btn-lg btn-primary btn-block" value="submit" type="button"
+                            onclick="testMark()">submit</button>
                     </form>
                 </div>
                 <!-- enf of the test marks-->
 
-                <!--course amrk div-->
+                <!--course mark div-->
                 <div class="col-6 col-md-4">
                     <form class="form-signin">
                         <div class="text-center mb-4">
@@ -138,9 +123,9 @@
                         </div>
 
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                            <input type="text" id="courseworkMark" class="form-control" placeholder="Course work"
                                 required autofocus>
-                            <label for="inputEmail">Coursework mark</label>
+                            <label for="inputCourseWork">Coursework mark</label>
                         </div>
 
                         <div class="checkbox mb-3">
@@ -148,7 +133,8 @@
                                 <input type="checkbox" value="remember-me"> Confirm coursework
                             </label>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
+                        <button class="btn btn-lg btn-primary btn-block" value="submit" type="button"
+                            onclick="courseWork()">submit</button>
                     </form>
                 </div>
 
@@ -162,9 +148,9 @@
                         </div>
 
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                required autofocus>
-                            <label for="inputEmail">Exam mark</label>
+                            <input type="mark" id="examMark" class="form-control" placeholder="Exam Mark" required
+                                autofocus>
+                            <label for="inputExamMark">Exam mark</label>
                         </div>
 
 
@@ -173,7 +159,8 @@
                                 <input type="checkbox" value="remember-me"> Confirm exam mark
                             </label>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
+                        <button class="btn btn-lg btn-primary btn-block" value="submit" type="button"
+                            onclick="examMarkScore()">submit</button>
                     </form>
                 </div>
             </div>
@@ -182,15 +169,68 @@
         <!-- different forms-->
 
     </div> <br>
-    
+
 
     <!-- show results here, for highest test mark, computed coursweork and final exam mark-->
-
-    
 
     <footer>
         <h5 style="color: teal; text-align: center;">Results shall go here</h5>
     </footer>
+
+    <!-- script for the test marks ----------------------------------------->
+    <script>
+        function testMark() {
+            // var textValue = document.getElementById('inputMark')
+            var test1 = document.getElementById('inputMark1')
+            var test2 = document.getElementById('inputMark2')
+            if ((test1.value == '') && (test2.value == '')) {
+                alert('Please input in your marks for test1 and test2 results to proceed!')
+                // return false
+            } else if((test1.value != '') && (test2.value == '')){
+                alert('Ooops, you are missing marks for test2! input both to proceed!')
+            }else if((test1.value == '') && (test2.value != '')){
+                alert('Ooops, you are missing marks for test1! input both to proceed!')
+            }
+            else if((test1.value != '') && (test2.value != '')){
+                if(test1.value > test2.value){
+                    alert('Your high score from the test marks is : ' + test1.value)
+                }else{
+                    alert('Your high score from the test marks is : ' + test2.value)
+                }
+            }
+        }
+    </script>
+    <!-- end of script for the test marks ---------------------------------------->
+
+    <!-- script for the coursework marks ----------------------------------------->
+    <script>
+        function courseWork() {
+            var cosworkMark = document.getElementById('courseworkMark')
+            if (cosworkMark.value == '') {
+                alert('Please enter in your coursework mark to proceed!')
+            } else if(cosworkMark.value != ''){
+                alert('Your Couserwork mark is ' + cosworkMark.value + ' and has been entered successfuly.')
+            }
+        }
+    </script>
+
+    <!-- end of script for the coursework marks ---------------------------------->
+
+    <!-- script for the coursework marks ----------------------------------------->
+    <script>
+        function examMarkScore() {
+            var exMark = document.getElementById('examMark')
+            if (exMark.value == '') {
+                alert('Please enter in your exam mark to proceed!')
+            } else if(exMark.value != ''){
+                alert('Your exam mark is ' + exMark.value + ' and has been entered successfuly.')
+            }
+        }
+    </script>
+
+    <!-- end of script for the coursework marks ---------------------------------->
+
+
 
 
 
