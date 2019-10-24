@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input value="try to select me please">
+        <p id='log'></p>
+
+    </form>
+    <script>
+    function logselect(event){
+        const log=document.getElementById('log')
+        const select=event.target.value.substring(event.target.selectionStart ,event.target.selectionEnd)
+        log.textContent=`you selected: ${select}`
+    }
+ 
+    const input=document.querySelector('input')
+    input.addEventListener('select',logselect)
+    </script>
+</body>
+
+</html>

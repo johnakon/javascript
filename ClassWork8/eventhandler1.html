@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        aside{
+            background:orangered;
+            border-radius: 2em;
+            display:inline-block;
+            padding: 2em;
+            transform: scale(.9);
+            transform-origin: 0 0;
+            transition: transform .6s;
+        }
+        .large{
+            transform: scale(2.3);
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h3>My space</h3>
+        <p>Double click to resize this object</p>
+    </aside>
+    <script>
+        const space=document.querySelector('aside')
+        space.addEventListener('click',function(e){
+            space.classList.toggle('large')// classlist is the object of the property toggle that enlarges on double clicking ont the space
+        })
+    
+    </script>
+
+
+</body>
+</html>
+
+
