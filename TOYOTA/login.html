@@ -39,35 +39,41 @@
 												width="72" height="72"> -->
 											<h1 class="h1 mb-3 font-weight-normal">Log in</h1>
 											<hr style="color: thistle;">
-											<p>Enter your <b><code style="color: teal;">username</b></code> and<b></b><code style="color: teal;"> password</b></code> here. </p>
+											<p>Enter your <b><code style="color: teal;">username</b></code>
+													and<b></b><code style="color: teal;"> password</b></code> here. </p>
 										</div>
 
 										<div class="form-label-group">
 											<input type="email" id="inputEmail" class="form-control"
-												placeholder="username" required autofocus>
+												placeholder="username">
 										</div><br>
 
 										<div class="form-label-group">
 											<input type="password" id="inputPassword" class="form-control"
-												placeholder="password" required>
+												placeholder="password">
 										</div>
 
-										<div class="checkbox mb-3">
-											<label>
-												<input type="checkbox" value="remember-me">Confirm password
-											</label>
-										</div>
+										<!-- <div class="checkbox mb-3"> -->
+										<input type="checkbox" value="remember-me" class="confirm"
+											style="text-align: left;">Confirm password
+										<!-- </div> -->
 										<!-- button section-->
-										<div class="container">
+										<div class="col-md-12">
 											<div class="row">
-												<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-													<button class="btn btn-primary my-button">Login</button>
+												<div class="col-md-6">
+													<button id="username" type="submit"
+														class="btn btn-info btn-responsive"
+														onclick="logInDisplay()">Login</button>
+
 												</div>
-												<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-													<button class="btn btn-primary my-button">Cancel</button>
+												<div class="col-md-6">
+													<button type="reset" id="password" 
+														class="btn btn-info btn-responsive"
+														onclick="logReset()">Cancel</button>
 												</div>
 											</div>
 										</div><br>
+
 										<!-- end of button section-->
 									</form>
 								</div>
@@ -78,18 +84,73 @@
 			</div>
 			<!-- end of main form content-->
 		</div>
+		<p class="contaniner-fluid" id="logreset" style="text-align: center;"></p>
+
+
 	</div>
 
-	<!--script tags-->
+	<!-- login display script-->
+	<script>
+		function logInDisplay() {
+			var userName = document.getElementById('username')
+			var passWord = document.getElementById('password')
+
+			if (userName.value == '' && passWord.value == '') {
+				alert('Please enter in your username and password to proceed!')
+			}else if(userName.value !== '' && passWord.value == '') {
+				alert('Please enter in your  password to proceed!')
+			}else if(userName.value == '' && passWord.value !== '') {
+				alert('Please enter in your username to proceed!')
+			}
+			 else{
+				alert(`your username is: ${userName.value}  and your password is: ${passWord.value}`)
+			}
+
+		}
+	</script>
+	<!-- end of login dispaly-->
+
+	<!--script to reset-->
+	<script>
+		function logReset(event) {
+			log.textContent = `Form reset! time Stamp: ${event.timeStamp}`
+
+			var userName = document.getElementById('username')
+			var passWord = document.getElementById('password')
+
+			if ((userName.value != '') && (passWord.value != '')) {
+				log.textContent = `Form reset! time Stamp: ${event.timeStamp}`
+			}
+		}
+		const form = document.querySelector('form')
+		const log = document.getElementById('logreset')
+		form.addEventListener('reset', logReset)
+	</script>
+	<!-- end of resetting script-->
+
+	<!-- script for selecting in the username-->
+	
+	<script>
+		function logselect(event) {
+			var userNameSelect = document.getElementById('username')
+			const select = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd)
+			alert(`you selected: ${select}`)
+		}
+
+		const input = document.getElementById('username')
+		input.addEventListener('select', logselect)
+	</script>
+	<!--end of script for seldcting in the username area-->
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+    <title>Registration</title>
+    <style>
+        .mainform {
+            margin-left: 500px;
+            background-color: white;
+            margin-right: 389px;
+
+
+        }
+
+        body {
+            background-color: rosybrown;
+        }
+
+        input {
+            /* margin-left: 70px; */
+            border: 1px solid blue;
+
+        }
+
+        h3,
+        h1 {
+            margin-left: 30px;
+            /* margin-right: 20px; */
+        }
+
+        /* -------------------------- starts here ------------------------*/
+        .element {
+            margin-left: 30px;
+            padding: 2.5% 0%;
+
+        }
+
+        .element span {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .element label {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        /* ------------------ ends here----------------------*/
+        select {
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+    </style>
+</head>
+
+<body onload="document.registration.userId.focus();">
+    <div class="mainform">
+        <h1>Registration Form</h1>
+        <form name="registration" >
+            <form action="">
+                <div class="container">
+                    <div class="element"> <span><label> ID: </label></span> <input type="text" id="userIdVal" name="userId"></div>
+                    <div class="element"> <span> <label>Password: </label> </span> <input type="password" id="passWord">
+                    </div>
+                    <div class="element"> <span><label> Name: </label></span> <input type="text" name="uname"></div>
+                    <div class="element"> <span> <label>Address: </label> </span> <input type="text"></div>
+                    <div class="element"> <span><label> Country: </label></span>
+                        <select>
+                            <option value="books">Uganda</option>
+                            <option value="html">Kenya</option>
+                            <option value="css">Zambia</option>
+                            <option value="php">Zimbabwe</option>
+                            <option value="js">Angola</option>
+                            <option value="books">Austria</option>
+                            <option value="html">Jamaica</option>
+                            <option value="css">Qatar</option>
+                            <option value="php">Lesotho</option>
+                            <option value="js">Mozambique</option>
+
+                        </select>
+                    </div>
+                    <div class="element"> <span> <label>Zipcode: </label> </span> <input type="password"></div>
+                    <div class="element"> <span><label> Email: </label></span> <input type="text"></div>
+                    <div class="element"> <span> <label>Sex: </label> </span> <input type="radio">Male<input
+                            type="radio">Female</div>
+                    <div class="element"> <span><label> Language: </label></span> <input type="checkbox">English<input
+                            type="checkbox">Non-English</div>
+                    <div class="element"> <span> <label>About: </label> </span> <input type="password"></div>
+                    <div class="element"><span><label></label></span><button type="button"
+                            onclick="return +formValidation();">Submit</button></div>
+
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </form>
+    </div>
+    </form>
+    <script src='validation.js'></script>
+</body>
+
+</html>

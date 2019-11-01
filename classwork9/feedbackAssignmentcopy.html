@@ -1,3 +1,5 @@
+<!-- use prompts and alerts -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +71,7 @@
         <p>
             <h3 style="text-align: center; text-decoration: underline; color: teal;">Please enter your test marks,
                 coursework mark and exam mark here below !</h3>
-        </p><br>
+        </p>
 
 
         <!-- different forms here-->
@@ -174,7 +176,12 @@
     <!-- show results here, for highest test mark, computed coursweork and final exam mark-->
 
     <footer>
-        <h5 style="color: teal; text-align: center;">Results shall go here</h5>
+        <h5 style="color: teal; text-align: center;">Results shall go here <img class="mb-4" src="images/results.png" alt="" width="30" height="30"></h5> 
+        <div class="container">
+                <!-- <p style="text-align: center;">The Result is :  <span id="result"></span> </p> -->
+                <p style="text-align: center;"><span id="result"></span> </p>
+        
+        </div>
     </footer>
 
     <!-- script for the test marks ----------------------------------------->
@@ -184,8 +191,7 @@
             var test1 = document.getElementById('inputMark1')
             var test2 = document.getElementById('inputMark2')
             if ((test1.value == '') && (test2.value == '')) {
-                alert('Please input in your marks for test1 and test2 results to proceed!')
-                // return false
+                alert('Please input in your marks for test1 and test2 results to proceed')
             } else if((test1.value != '') && (test2.value == '')){
                 alert('Ooops, you are missing marks for test2! input both to proceed!')
             }else if((test1.value == '') && (test2.value != '')){
@@ -193,9 +199,9 @@
             }
             else if((test1.value != '') && (test2.value != '')){
                 if(test1.value > test2.value){
-                    alert('Your high score from the test marks is : ' + test1.value)
+                   alert('Your high score from the test marks is : ' + test1.value )
                 }else{
-                    alert('Your high score from the test marks is : ' + test2.value)
+                    alert('Your high score from the test marks is : '+ test2.value )
                 }
             }
         }
@@ -210,6 +216,7 @@
                 alert('Please enter in your coursework mark to proceed!')
             } else if(cosworkMark.value != ''){
                 alert('Your Couserwork mark is ' + cosworkMark.value + ' and has been entered successfuly.')
+
             }
         }
     </script>
@@ -224,6 +231,7 @@
                 alert('Please enter in your exam mark to proceed!')
             } else if(exMark.value != ''){
                 alert('Your exam mark is ' + exMark.value + ' and has been entered successfuly.')
+
             }
         }
     </script>
@@ -233,7 +241,8 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -242,7 +251,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    
 
 </body>
 
