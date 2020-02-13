@@ -1,3 +1,3 @@
 # javascript
 
-most javascript exercises and lessons during catalyst
+most javascript exercises and lessons during my catalyst course at refactory
